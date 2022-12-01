@@ -6,7 +6,7 @@
 #### it's necessary to create an .env file in the root (marvel_project/) of the project with the following keys: <h4>
 * DB_PASSWORD=yourpassword
 * DB_USER=root
-* APIKEY=yourkeyapi
+* APIKEY=yourapikey
 * HASH=yourhash
 * MD5HASH=yourmd5hash
 * DB_HOST=mysql
@@ -19,9 +19,9 @@
 + MYSQL
 
 ### Folder Structure <h3>
- * marvel_project/ - contains docker-compose, dockerfile(img python) and requierements. (important file .env above mentioned)
- * marvel_project/db/ - contains dockerfile (img mysql) and database_dbmrv.sql (queries run on starting)
- * marvel_project/src/ - API server code
+ * marvel_project/(repository) - contains docker-compose, dockerfile(img python) and requierements. (important file .env above mentioned)
+ * db/ - contains dockerfile (img mysql) and database_dbmrv.sql (queries run on starting)
+ * src/ - API server code
   
   
   
