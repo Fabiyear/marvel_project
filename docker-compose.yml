@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  app_python:
+    environment:
+      node_env:
+    image: marvel-python
+    env_file:
+      - .env
+    container_name: marvel-py
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - mysql
+  mysql:
+    build: ./db/
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - '3306:3306'
